@@ -108,7 +108,7 @@ Si consiglia l'utilizzo di un [virtual environment](https://towardsdatascience.c
 
 <b>6)</b> Ottieni la copia del database delle serate PowerPoint ```/backup```.  Si può aprire con un qualunque software che supporti SQLite. Consiglio [DB Browser for SQLite](https://sqlitebrowser.org/).
 
-####Note
+#### Note
 
 Il bot è stato pensato per non essere sempre attivo e il database è salvato esclusivamente in locale.
 
