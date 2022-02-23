@@ -1,22 +1,33 @@
 ## Prima configurazione
 
-1) Nel file ```config.yaml``` inserisci il token del tuo bot che hai creato con [@BotFather](https://t.me/BotFather).
+1) Nel file ```config.yaml``` inserisci il token del tuo bot che hai creato con [@BotFather](https://t.me/BotFather):
 
-	TOKEN: QUI_IL_TUO_TOKEN
+```TOKEN: QUI_IL_TUO_TOKEN```
 
- Se preferisci, puoi anche inserire il TOKEN utilizzando l'environment varibale ```API_TOKEN```. 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se preferisci, puoi anche inserire il TOKEN utilizzando l'environment varibale ```API_TOKEN```. 
 
-2) Nel file ```config.yaml``` inserisci l'elenco degli ```USER ID``` (puoi ottenerlo chattando con [@getmyid_bot](https://t.me/getmyid_bot)) che saranno autorizzati a usare i comandi del bot.
+2) Nel file ```config.yaml``` inserisci l'elenco degli ```USER ID``` (puoi ottenere il tuo ID chattando con [@getmyid_bot](https://t.me/getmyid_bot)) che saranno autorizzati a usare i comandi del bot.
 
-Il formato da seguire è:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Il formato da seguire è:
+
 ```
+whitelisted_ids:
+
 - 'USER_ID_1'
 - 'USER_ID_2'
 - 'USER_ID_3'
 ```
 
-Ovviamente tutti gli utenti appartenteneti al gruppo potranno sempre votare senza alcuna altra operazione necessaria.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ovviamente tutti gli utenti appartenteneti al gruppo potranno sempre votare senza alcuna altra operazione necessaria.
 
+3) Il bot è pensato per esprimere valutazioni che vanno da 1 a 10 ma puoi ridurre il numero di opzioni modificando l'elenco sotto ```options``` mantenendo lo stesso formato:
+
+```
+options:
+- '1'
+- '2'
+- '3'
+```
 #### Logging
 
 Se vuoi disattivare il logging, commenta le righe 21 e 22 aggiungendo un "```#```":
@@ -37,9 +48,9 @@ A così:
 
 ## Avvio del bot 
 
-#### Docker
+#### Docker con Docker Compose
 
-In alternativa al metodo descritto sopra, puoi utlizzare Docker:
+Il modo più semplice per avviare il bot prevede l'utlizzo di Docker Compose con il comando:
 
 ```docker compose up```
 
@@ -77,26 +88,28 @@ Si consiglia l'utilizzo di un [virtual environment](https://towardsdatascience.c
 
 ```/help``` - ti spiego come funziono
 
-## Avvio nuova serata PowerPoint
+## Gestione serata PowerPoint
 
 <b>1)</b> All'inizio di una serata PowerPoint dammi il comando ```/new_session``` per iniziare una nuova partita. Ti verrà richiesto di inserire la data odierna nel formato <code>DD-MM-YYYY.</code>
 
 <b>2)</b> Alla fine di ogni presentazione dammi il comando ```/vote```, ti chiederò il nome del relatore e dopo invierò 3 sondaggi relativi alle 3 categorie per le quali state competendo:
 
-1) Il ridere
-2) Il sapere
-3) Il sacrificio
-
-La presentazione del giorno sarà quella che avrà totalizzato più punti sommando quelli ottenuti nelle categorie "Il ridere" e "Il sapere".
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) Il ridere
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Il sapere
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Il sacrificio
 
 <b>DOPO</b> la conclusione delle votazioni, rispondi a **ciascun sondaggio** inviando il comando ```/save``` per memorizzarne il risultato.
 
 <b>3)</b> Ripeti il punto 2) per ogni relatore.
 
-<b>4)</b> Quando tutti hanno esposto la propria relazione, dammi il comando ```/results``` per visualizzare le classifiche finali e decretare il vincitore.
+<b>4)</b> Quando tutti hanno esposto la propria relazione, dammi il comando ```/results``` per visualizzare le classifiche finali e decretare il vincitore. La presentazione del giorno sarà quella che avrà totalizzato più punti sommando quelli ottenuti nelle categorie "*Il ridere*" e "*Il sapere*".
 
-<b>5)</b> Se vuoi vedere il risultato di una vecchia partita, dammi il comando ```/old_session_results```.
+<b>5)</b> Se vuoi vedere il risultato di una vecchia partita, ammesso che tu disponga del database completo, dammi il comando ```/old_session_results```.
 
 <b>6)</b> Ottieni la copia del database delle serate PowerPoint ```/backup```.  Lo puoi aprire con un qualunque software che supporti SQLite. Io consiglio [DB Browser for SQLite](https://sqlitebrowser.org/).
+
+####Note
+
+Il bot è stato pensato per non essere sempre attivo e il database è salvato esclusivamente in locale.
 
 <i>Perché c'è un mix di inglese e italiano? Boh.</i> 🎲️
