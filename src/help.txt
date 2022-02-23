@@ -1,0 +1,30 @@
+<b>Attualmente supporto i comandi:</b>
+
+/start - beh starta il bot
+/new_session - avvia una nuova serata PowerPoint
+/vote - avvia una nuova votazione
+/save - salva i risultati della votazione
+/results - visualizza i risultati della partita odierna
+/old_session_results - visualizza i risultati di una partita precedente
+/backup - ottieni la copia del database delle serate PowerPoint
+/help - ti spiego come funziono
+
+<b>1)</b> All'inizio di una serata PowerPoint dammi il comando "/new_session" per iniziare una nuova partita. Ti verrà richiesto di inserire la data odierna nel formato <code>DD-MM-YYYY.</code>
+
+<b>2)</b> Alla fine di ogni presentazione dammi il comando "/vote", ti chiederò il nome del relatore e dopo invierò 3 sondaggi relativi alle 3 categorie per le quali state competendo:
+
+1) Il ridere
+2) Il sapere
+3) Il sacrificio
+
+La presentazione del giorno sarà quella che avrà totalizzato più punti sommando quelli ottenuti nelle categorie "Il ridere" e "Il sapere".
+
+<b>DOPO</b> la conclusione delle votazioni, rispondi a ciascun sondaggio inviando il comando "/save" per memorizzarne il risultato.
+
+<b>3)</b> Ripeti il punto 2) per ogni concorrente.
+
+<b>4)</b> Quando tutti hanno esposto la propria relazione, dammi il comando "/results" per visualizzare le classifiche finali e decretare il vincitore.
+
+<b>5)</b> Se vuoi vedere il risultato di una vecchia partita, dammi il comando "/old_session_results".
+
+<i>Perché c'è un mix di inglese e italiano? Boh, è capitato.</i>
