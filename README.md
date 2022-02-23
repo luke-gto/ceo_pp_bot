@@ -106,7 +106,7 @@ Si consiglia l'utilizzo di un [virtual environment](https://towardsdatascience.c
 
 <b>5)</b> Se vuoi vedere il risultato di una vecchia partita, ammesso che tu disponga del database completo, dammi il comando ```/old_session_results```.
 
-<b>6)</b> Ottieni la copia del database delle serate PowerPoint ```/backup```.  Lo puoi aprire con un qualunque software che supporti SQLite. Io consiglio [DB Browser for SQLite](https://sqlitebrowser.org/).
+<b>6)</b> Ottieni la copia del database delle serate PowerPoint ```/backup```.  Si può aprire con un qualunque software che supporti SQLite. Consiglio [DB Browser for SQLite](https://sqlitebrowser.org/).
 
 ####Note
 
